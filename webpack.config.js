@@ -5,11 +5,11 @@ module.exports = {
     entry: './src/index.ts',
     output: {
         filename: 'bundle.js',
-        path: path.resolve(__dirname, 'dist')
+        path: path.resolve(__dirname, 'dist/client')
     },
     devtool: 'source-map',
     devServer: {
-        contentBase: path.join(__dirname, 'dist'),
+        contentBase: path.join(__dirname, 'dist/client'),
         port: 9000
     },
     plugins: [
@@ -29,7 +29,7 @@ module.exports = {
               exclude: /node_modules/,
               loader: 'ts-loader',
               options: {
-                configFile: 'tsconfig.json'
+                configFile: 'client.tsconfig.json'
               }
             },
             {
