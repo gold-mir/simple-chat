@@ -1,8 +1,9 @@
 import * as React from 'react'
 import * as ReactDOM from 'react-dom'
-import { createStore } from 'redux'
-import rootReducer from './store/index'
-import { ADD_THING } from './store/index'
+import { createStore, applyMiddleware } from 'redux'
+import thunk from 'redux-thunk'
+import rootReducer from './store/root'
+import { ADD_THING } from './store/root'
 import { Provider } from 'react-redux'
 
 import Stuff from './components/stuff'
@@ -16,7 +17,7 @@ function App(): React.ReactElement{
     )
 }
 
-export const store = createStore(rootReducer)
+export const store = createStore(rootReducer, applyMiddleware(thunk))
 
 store.dispatch({type: ADD_THING, payload: "I love my wife"})
 store.dispatch({type: ADD_THING, payload: "My wife is very soft and cute"})

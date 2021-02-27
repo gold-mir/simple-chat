@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { RootState } from '../store/index'
+import { RootState } from '../store/root'
 import { Message } from '../store/chat'
 import { connect, useSelector } from 'react-redux'
 
