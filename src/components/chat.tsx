@@ -1,8 +1,8 @@
 import * as React from 'react'
 import { useCallback } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
 
-import { Message, sendMessage } from '../store/chat'
+import { Message, sendMessage } from '../store/chatReducer'
 
 import ChatBox from './chatbox'
 import ChatInput from './chatinput'

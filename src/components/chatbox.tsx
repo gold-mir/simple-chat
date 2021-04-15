@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { RootState } from '../store/root'
-import { Message } from '../store/chat'
+import { Message } from '../store/chatReducer'
 import { connect, useSelector } from 'react-redux'
 
 // interface Props {
